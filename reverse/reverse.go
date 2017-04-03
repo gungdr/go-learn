@@ -1,11 +1,11 @@
-package main
+package reverse
 
 import (
 	"fmt"
 	"strings"
 )
 
-func main() {
+func Generate() {
 
 	input := "Agung Dwi Riansah"
 	split := strings.Split(input, " ")

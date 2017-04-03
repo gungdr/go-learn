@@ -1,9 +1,10 @@
-package main
+package print_star
 
 import (
 	"fmt"
 )
-func test_a(n int){
+
+func test_a(n int) {
 	for i := 1; i <= n; i++ {
 		for j := 1; j <= n; j++ {
 			if j >= i {
@@ -16,22 +17,22 @@ func test_a(n int){
 		fmt.Println("")
 	}
 }
-func test_b(n int,j int) {
-	if n > 0 {		
-		test_b(n-1,j)
-		if(n<j){
+func test_b(n int, j int) {
+	if n > 0 {
+		test_b(n-1, j)
+		if n < j {
 			fmt.Print("*")
-		}else{
+		} else {
 			fmt.Print(n)
 		}
 	}
 }
-func main() {
+func Generate() {
 	n := 5
-	for i:=1;i<=n;i++{
-		test_b(n,i)		
+	for i := 1; i <= n; i++ {
+		test_b(n, i)
 		fmt.Println("")
 	}
-	
+
 	test_a(n)
 }

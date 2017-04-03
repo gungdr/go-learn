@@ -1,4 +1,4 @@
-package main
+package dijsktra
 
 import "fmt"
 
@@ -40,7 +40,7 @@ func dijkstra(graph [][]int, src int) {
 		min_dist := minDistance(dist, sptSet)
 		sptSet[min_dist] = true
 		for v := 0; v < V; v++ {
-			if !sptSet[v] && graph[min_dist][v] >0 &&
+			if !sptSet[v] && graph[min_dist][v] > 0 &&
 				dist[min_dist] != MAX_INT &&
 				dist[min_dist]+graph[min_dist][v] < dist[v] {
 
@@ -53,7 +53,7 @@ func dijkstra(graph [][]int, src int) {
 	printSolution(dist)
 
 }
-func main() {
+func Generate() {
 	graph := [][]int{{0, 4, 0, 0, 0, 0, 0, 8, 0},
 		{4, 0, 8, 0, 0, 0, 0, 11, 0},
 		{0, 8, 0, 7, 0, 4, 0, 0, 2},

@@ -1,10 +1,10 @@
-package main
+package binary
 
 import (
 	"fmt"
 )
 
-func main() {
+func Generate() {
 	var input int
 	_, err := fmt.Scanf("%d", &input)
 	var arr []int
